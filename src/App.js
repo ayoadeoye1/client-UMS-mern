@@ -6,7 +6,7 @@ import UsrLandingPg from './user/usrLandingPg';
 import Posts from './user/posts';
 import Dashboard from './user/dashboard';
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 // import { useSelector } from 'react-redux';
 
 
@@ -43,6 +43,7 @@ const App = () => {
             <div>
             <LandingPg />
             <Routes>
+                <Route path='/' element={<Navigate to = '/signup' />} />
                 <Route path='/signup' element={<SignUp />} />
                 <Route path='/signin' element={<SignIn />} />
                 {

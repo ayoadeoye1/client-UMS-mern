@@ -50,7 +50,7 @@ const SignUp = () => {
         const fetchData = async () =>{
             setLoading((prev) => !prev);
             try {
-                const response = await axios.post("http://localhost:8000/api/signup", body);
+                const response = await axios.post("https://ums-mern.herokuapp.com/api/signup", body);
                     console.log(response);
                     // dispatch({type: loadIt})
                     setLoading((prev) => !prev);

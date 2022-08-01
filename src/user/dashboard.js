@@ -18,7 +18,7 @@ const Dashboard = () => {
   useEffect(()=>{
     setLoading(true)
     const fetchData = async() =>{
-      const response = await axios.post('http://localhost:8000/api/getpost/:id', {token: token});
+      const response = await axios.post('https://ums-mern.herokuapp.com/api/getpost/:id', {token: token});
       try {
         setLoading(false)
         if(response.data === null){
@@ -44,7 +44,7 @@ const Dashboard = () => {
   const delUser = () =>{
     setDelSus(true)
     const del = async() =>{
-      const res = axios.post('http://localhost:8000/api/delacc/:id', body)
+      const res = axios.post('https://ums-mern.herokuapp.com/api/delacc/:id', body)
       try {
         setDelSus(false)
         console.log(res)

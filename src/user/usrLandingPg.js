@@ -16,7 +16,7 @@ const UsrLandingPg = () => {
   // }
 
   useEffect(()=>{
-    axios.post('http://localhost:8000/api/getuser', {token: token})
+    axios.post('https://ums-mern.herokuapp.com/api/getuser', {token: token})
     .then((response => {
         const { username } = response.data;
         setUsername(username);

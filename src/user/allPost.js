@@ -20,7 +20,7 @@ const AllPost = () => {
     useEffect(()=>{
       setLoading(true)
       const fetchData = async() =>{
-        const response = await axios.get('http://localhost:8000/api/getposts');
+        const response = await axios.get('https://ums-mern.herokuapp.com/api/getposts');
         try {
           setLoading(false)
           console.log(response)

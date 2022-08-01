@@ -42,7 +42,7 @@ const Posts = () => {
     setLoading((prev) => !prev )
 
     const fetchData = async() =>{
-      const response = await axios.post('http://localhost:8000/api/createpost/:id', body);
+      const response = await axios.post('https://ums-mern.herokuapp.com/api/createpost/:id', body);
       try {
         setLoading((prev) => !prev )
         console.log(response)
