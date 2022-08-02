@@ -33,7 +33,7 @@ const SignIn = () => {
         const fetchDat = async () =>{
             setLoading((prev) => !prev)
             try {
-                const response = await axios.post('https://ums-mern.herokuapp.com/api/signin', body); //, {withCredentials: true}
+                const response = await axios.post('https://ums-mern.herokuapp.com/api/signin', body); //
                 setLoading((prev) => !prev)
                 toast.success('login success')
                 localStorage.setItem('token', response.data.success) 
