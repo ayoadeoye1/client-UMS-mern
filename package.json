@@ -1,4 +1,9 @@
 {
+  "proxy": {
+      "/api/**": {
+          "target": "https://ums-client.netlify.app"
+      }
+  },
   "name": "react-redux",
   "version": "0.1.0",
   "private": true,
